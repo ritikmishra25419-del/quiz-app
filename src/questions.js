@@ -1,59 +1,73 @@
-const questions = [
-  {
-    question: "What does HTML stand for?",
-    options: ["Hyper Text Markup Language", "High Tech Modern Language", "Hyper Transfer Mode Link"],
-    answer: "Hyper Text Markup Language"
-  },
-  {
-    question: "Which language is used to style web pages?",
-    options: ["Python", "CSS", "Java"],
-    answer: "CSS"
-  },
-  {
-    question: "Which of these is a JavaScript framework?",
-    options: ["Django", "Laravel", "React"],
-    answer: "React"
-  },
-  {
-    question: "What does CSS stand for?",
-    options: ["Cascading Style Sheets", "Creative Style System", "Computer Style Syntax"],
-    answer: "Cascading Style Sheets"
-  },
-  {
-    question: "Which tag is used to link a CSS file in HTML?",
-    options: ["<script>", "<style>", "<link>"],
-    answer: "<link>"
-  },
-  {
-    question: "What does SQL stand for?",
-    options: ["Structured Query Language", "Simple Question Logic", "System Query List"],
-    answer: "Structured Query Language"
-  },
-  {
-    question: "Which company developed React?",
-    options: ["Google", "Facebook", "Microsoft"],
-    answer: "Facebook"
-  },
-  {
-    question: "What is the correct way to declare a variable in JavaScript?",
-    options: ["var name = 'Ritik'", "variable name = 'Ritik'", "v name = 'Ritik'"],
-    answer: "var name = 'Ritik'"
-  },
-  {
-    question: "Which of these is a backend runtime for JavaScript?",
-    options: ["Node.js", "React.js", "Bootstrap"],
-    answer: "Node.js"
-  },
-  {
-    question: "What does API stand for?",
-    options: ["Application Programming Interface", "Automated Program Input", "Applied Process Integration"],
-    answer: "Application Programming Interface"
-  },
-  {
-    question: "Which HTML tag is used to insert an image?",
-    options: ["<img>", "<image>", "<pic>"],
-    answer: "<img>"
-  }
-];
+const questions = {
+  'Web Development': [
+    { question: "What does HTML stand for?", options: ["Hyper Text Markup Language", "High Tech Modern Language", "Hyper Transfer Mode Link", "Hyperlink Text Mode Language"], answer: "Hyper Text Markup Language" },
+    { question: "Which tag is used to link a CSS file in HTML?", options: ["<script>", "<style>", "<link>", "<css>"], answer: "<link>" },
+    { question: "Which HTML tag is used to insert an image?", options: ["<img>", "<image>", "<pic>", "<src>"], answer: "<img>" },
+    { question: "What does CSS stand for?", options: ["Cascading Style Sheets", "Creative Style System", "Computer Style Syntax", "Coded Style Structure"], answer: "Cascading Style Sheets" },
+    { question: "Which protocol is used to transfer web pages?", options: ["FTP", "SMTP", "HTTP", "SSH"], answer: "HTTP" },
+    { question: "What does DOM stand for?", options: ["Document Object Model", "Data Object Manager", "Display Output Mode", "Document Order Map"], answer: "Document Object Model" },
+    { question: "Which HTML attribute is used to define inline styles?", options: ["class", "style", "font", "css"], answer: "style" },
+    { question: "What is the correct HTML for a paragraph?", options: ["<p>", "<para>", "<pg>", "<text>"], answer: "<p>" },
+    { question: "Which HTML element defines the title of a document?", options: ["<head>", "<meta>", "<title>", "<header>"], answer: "<title>" },
+    { question: "What does URL stand for?", options: ["Uniform Resource Locator", "Universal Reference Link", "Unique Resource Label", "Unified Routing Logic"], answer: "Uniform Resource Locator" },
+    { question: "Which tag creates a hyperlink in HTML?", options: ["<link>", "<a>", "<href>", "<url>"], answer: "<a>" },
+  ],
+
+  'JavaScript': [
+    { question: "Which company developed JavaScript?", options: ["Google", "Microsoft", "Netscape", "Apple"], answer: "Netscape" },
+    { question: "What is the correct way to declare a variable in modern JavaScript?", options: ["var x = 5", "let x = 5", "variable x = 5", "v x = 5"], answer: "let x = 5" },
+    { question: "Which symbol is used for single-line comments in JavaScript?", options: ["//", "/*", "#", "--"], answer: "//" },
+    { question: "What does '===' mean in JavaScript?", options: ["Assignment", "Loose equality", "Strict equality", "Not equal"], answer: "Strict equality" },
+    { question: "Which method adds an element to the end of an array?", options: ["push()", "pop()", "shift()", "append()"], answer: "push()" },
+    { question: "What does 'typeof null' return in JavaScript?", options: ["null", "undefined", "object", "string"], answer: "object" },
+    { question: "Which keyword is used to create a function in JavaScript?", options: ["def", "func", "function", "lambda"], answer: "function" },
+    { question: "What is a closure in JavaScript?", options: ["A loop that closes", "A function with access to its outer scope", "A way to close the browser", "An error handler"], answer: "A function with access to its outer scope" },
+    { question: "Which method is used to convert JSON to a JavaScript object?", options: ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.decode()"], answer: "JSON.parse()" },
+    { question: "What does 'NaN' stand for?", options: ["Not a Node", "Null and Null", "Not a Number", "New a Null"], answer: "Not a Number" },
+    { question: "Which event fires when a user clicks an element?", options: ["onhover", "onchange", "onclick", "onfocus"], answer: "onclick" },
+  ],
+
+  'React': [
+    { question: "What is JSX?", options: ["A database query language", "JavaScript XML syntax for React", "A CSS framework", "A Node.js module"], answer: "JavaScript XML syntax for React" },
+    { question: "Which hook is used to manage state in a functional component?", options: ["useEffect", "useRef", "useState", "useContext"], answer: "useState" },
+    { question: "What does useEffect do?", options: ["Manages state", "Runs side effects after render", "Creates a new component", "Handles routing"], answer: "Runs side effects after render" },
+    { question: "What is a React prop?", options: ["A state variable", "Data passed from parent to child component", "A built-in hook", "A CSS class"], answer: "Data passed from parent to child component" },
+    { question: "Which company created React?", options: ["Google", "Microsoft", "Twitter", "Facebook"], answer: "Facebook" },
+    { question: "What is the virtual DOM?", options: ["A browser API", "A lightweight copy of the real DOM", "A CSS engine", "A React hook"], answer: "A lightweight copy of the real DOM" },
+    { question: "How do you render a list in React?", options: ["Using for loops", "Using map()", "Using forEach()", "Using while loops"], answer: "Using map()" },
+    { question: "What is the purpose of the key prop in React lists?", options: ["Styling elements", "Helping React identify changed items", "Passing data to children", "Setting focus"], answer: "Helping React identify changed items" },
+    { question: "Which file is the entry point of a React app?", options: ["App.js", "index.html", "index.js", "main.js"], answer: "index.js" },
+    { question: "What does React.Fragment do?", options: ["Creates a new component", "Groups elements without adding extra DOM nodes", "Handles errors", "Manages state"], answer: "Groups elements without adding extra DOM nodes" },
+    { question: "Which hook replaces componentDidMount in functional components?", options: ["useState", "useRef", "useEffect", "useMemo"], answer: "useEffect" },
+  ],
+
+  'CSS': [
+    { question: "Which property changes text color in CSS?", options: ["font-color", "text-color", "color", "foreground"], answer: "color" },
+    { question: "What does 'display: flex' do?", options: ["Hides an element", "Makes element flexible/responsive", "Enables flexbox layout", "Changes font size"], answer: "Enables flexbox layout" },
+    { question: "Which unit is relative to the viewport width?", options: ["px", "em", "rem", "vw"], answer: "vw" },
+    { question: "What is the CSS box model?", options: ["A 3D design tool", "Content, padding, border, margin layers", "A grid system", "A color model"], answer: "Content, padding, border, margin layers" },
+    { question: "Which property controls the space inside an element?", options: ["margin", "spacing", "padding", "border"], answer: "padding" },
+    { question: "What does 'position: absolute' do?", options: ["Fixes element to viewport", "Positions element relative to nearest positioned ancestor", "Removes element from flow relatively", "Centers element"], answer: "Positions element relative to nearest positioned ancestor" },
+    { question: "Which property makes an element invisible but still takes space?", options: ["display: none", "opacity: 0", "visibility: hidden", "hidden: true"], answer: "visibility: hidden" },
+    { question: "What is a CSS pseudo-class?", options: ["A fake class", "A selector for special states like :hover", "A CSS variable", "A media query"], answer: "A selector for special states like :hover" },
+    { question: "Which property is used for CSS animations?", options: ["transition", "animation", "transform", "keyframe"], answer: "animation" },
+    { question: "What does 'z-index' control?", options: ["Zoom level", "Horizontal position", "Stacking order of elements", "Font size"], answer: "Stacking order of elements" },
+    { question: "Which value of 'position' removes an element from the normal document flow?", options: ["relative", "static", "absolute", "inherit"], answer: "absolute" },
+  ],
+
+  'General CS': [
+    { question: "What does CPU stand for?", options: ["Central Processing Unit", "Core Processing Utility", "Central Program Unit", "Computer Processing Unit"], answer: "Central Processing Unit" },
+    { question: "What is a binary number system?", options: ["Base 8 number system", "Base 2 number system", "Base 16 number system", "Base 10 number system"], answer: "Base 2 number system" },
+    { question: "What does RAM stand for?", options: ["Random Access Memory", "Read Access Mode", "Runtime Application Memory", "Rapid Access Module"], answer: "Random Access Memory" },
+    { question: "Which data structure uses LIFO order?", options: ["Queue", "Array", "Stack", "Linked List"], answer: "Stack" },
+    { question: "What is an algorithm?", options: ["A programming language", "A step-by-step problem solving procedure", "A type of database", "A hardware component"], answer: "A step-by-step problem solving procedure" },
+    { question: "What does SQL stand for?", options: ["Structured Query Language", "Simple Question Logic", "System Query List", "Sequential Query Layer"], answer: "Structured Query Language" },
+    { question: "Which data structure uses FIFO order?", options: ["Stack", "Tree", "Queue", "Graph"], answer: "Queue" },
+    { question: "What is the time complexity of binary search?", options: ["O(n)", "O(n²)", "O(log n)", "O(1)"], answer: "O(log n)" },
+    { question: "What does OOP stand for?", options: ["Object Oriented Programming", "Open Output Process", "Ordered Object Prototype", "Optional Output Parameter"], answer: "Object Oriented Programming" },
+    { question: "What is a compiler?", options: ["A program that runs code line by line", "A program that translates source code to machine code", "A code editor", "A debugging tool"], answer: "A program that translates source code to machine code" },
+    { question: "What is recursion?", options: ["A loop that runs forever", "A function that calls itself", "A type of variable", "A sorting algorithm"], answer: "A function that calls itself" },
+  ],
+};
 
 export default questions;
