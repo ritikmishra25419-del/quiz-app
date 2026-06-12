@@ -214,7 +214,7 @@ function Leaderboard({ onBack }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/leaderboard')
+    fetch('https://quiz-backend-tdb3.onrender.com/leaderboard')
       .then(r => r.json())
       .then(data => { setEntries(data); setLoading(false); })
       .catch(() => setLoading(false));
@@ -290,7 +290,7 @@ export default function App() {
 
   async function saveScore(score) {
     try {
-      await fetch('http://localhost:5000/scores', {
+      await fetch('https://quiz-backend-tdb3.onrender.com/scores', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
