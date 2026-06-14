@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# 🚀 Space Quiz — Full Stack Quiz Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A space-themed, multiplayer quiz web app with AI-ready architecture, real-time leaderboards, and category-based questions. Built with React, Node.js, PostgreSQL, and deployed on Vercel + Render.
 
-## Available Scripts
+🔗 **Live Demo:** https://quiz-app-58ck.vercel.app
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🧑‍🚀 Character selection — 5 unique space characters
+- 🗂️ 5 question categories — Web Development, JavaScript, React, CSS, General CS
+- ⏱️ 20-second countdown timer per question with color feedback
+- ✅ Instant answer feedback — green for correct, red for wrong
+- 🏆 Global leaderboard — scores saved to cloud database
+- 📊 Progress bar and live score tracking
+- 🌌 Space theme with animated stars and glassmorphism UI
+- 📱 Fully responsive
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- React (Create React App)
+- CSS3 — Glassmorphism, animations, gradients
+- Deployed on **Vercel**
 
-### `npm run build`
+### Backend
+- Node.js + Express.js
+- REST API — POST /scores, GET /leaderboard
+- Deployed on **Render**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Database
+- PostgreSQL via **Supabase**
+- Stores player name, character, category, score, and timestamp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🗂️ Project Structure
+quiz-app/
 
-### `npm run eject`
+├── src/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+│   ├── App.js          # All screens — Character Select, Home, Quiz, Leaderboard, Result
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+│   ├── App.css         # Space theme, glassmorphism, animations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+│   └── questions.js    # 55 questions across 5 categories
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+├── public/
 
-## Learn More
+└── package.json
+quiz-backend/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+├── server.js           # Express API — /scores and /leaderboard
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+├── .env                # Database URL (not committed)
 
-### Code Splitting
+└── package.json
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Run Locally
 
-### Analyzing the Bundle Size
+### Frontend
+```bash
+git clone https://github.com/ritikmishra25419-del/quiz-app.git
+cd quiz-app
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Backend
+```bash
+git clone https://github.com/ritikmishra25419-del/quiz-backend.git
+cd quiz-backend
+npm install
+# Create .env with DATABASE_URL and PORT=5000
+npm run dev
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📡 API Endpoints
 
-### Advanced Configuration
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/scores` | Save a player's score |
+| GET | `/leaderboard` | Get top 10 scores globally |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧠 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Building a full stack app from scratch — React frontend to Node.js backend to PostgreSQL
+- JWT-free REST API design with Express.js
+- Connecting a React app to a live cloud database via API
+- Deploying frontend and backend to separate cloud platforms
+- Managing CORS, environment variables, and production builds
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👨‍💻 Author
+
+**Ritik Mishra**
+- GitHub: [@ritikmishra25419-del](https://github.com/ritikmishra25419-del)
+- LinkedIn: [linkedin.com/in/ritik-mishra-827162374](https://linkedin.com/in/ritik-mishra-827162374)
